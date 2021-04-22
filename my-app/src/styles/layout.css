@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    height: 100px;
+    background-color: palegreen;
+}
+
+.body {
+    background-color: palegoldenrod;
+    flex: 1;
+}
+
+.footer {
+    height: 100px;
+    background-color: palevioletred;
+}

@@ -1,0 +1,17 @@
+.todo-list{
+
+}
+
+.flex-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-left-5{
+    margin-left: 5px;
+}
+
+.blue{
+    color: blue;
+}
