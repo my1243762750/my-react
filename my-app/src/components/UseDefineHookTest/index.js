@@ -1,29 +1,31 @@
-import React, {useRef} from 'react'
+import React, {useState} from 'react'
 
 // useRef作用
-// 1获取dom元素
-// 2存值
-export function UseRefTest() {
-    const ref1 = useRef(null)
-    const ref2 = useRef({name: 'san'})
+export function UseDefineHookTest() {
+    const useCalc = () => {
+        const [x] = useState(1)
+        const [y] = useState(1)
+        const add = (x, y) => {
+            return x + y
+        }
+        const sub = (x, y) => {
+            return x - y
+        }
+        const mul = (x, y) => {
+            return x * y
+        }
+        const div = (x, y) => {
+            return x / y
+        }
+        return {x, y, add, sub, mul, div}
+    }
+    const {x, y, add, sub, mul, div} = useCalc()
     return (
         <>
-            {/*1获取dom元素*/}
-            <div>
-                <input ref={ref1} type="text"/>
-                <button onClick={() => {
-                    console.log(ref1.current.value)
-                }}>click
-                </button>
-            </div>
-            {/*2存值*/}
-            <div>
-                <button onClick={() => {
-                    ref2.current.name = ref1.current.value
-                    console.log(ref2)
-                }}>click
-                </button>
-            </div>
+            <div>{add(x, y)}</div>
+            <div>{sub(x, y)}</div>
+            <div>{mul(x, y)}</div>
+            <div>{div(x, y)}</div>
         </>
     )
 }

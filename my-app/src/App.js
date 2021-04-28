@@ -8,7 +8,9 @@ import { Layout } from './components/Layout'
 // import { UseMemoTest } from "./components/UseMemoTest";
 // import { UseCallbackTest } from "./components/UseCallBackTest";
 // import { UseImperativeHandleTest } from "./components/UseImperativeHandleTest";
-import { UseLayoutEffectTest } from "./components/UseLayoutEffectTest";
+// import { UseLayoutEffectTest } from "./components/UseLayoutEffectTest";
+// import { UseDefineHookTest } from "./components/UseDefineHookTest";
+import { UseReducerTest } from "./components/UseReducerTest";
 import './App.css';
 
 function App() {
@@ -23,7 +25,9 @@ function App() {
           {/*<UseMemoTest/>*/}
           {/*<UseCallbackTest/>*/}
           {/*<UseImperativeHandleTest/>*/}
-          <UseLayoutEffectTest/>
+          {/*<UseLayoutEffectTest/>*/}
+          {/*<UseDefineHookTest/>*/}
+          <UseReducerTest/>
       </Layout>
     </div>
   );

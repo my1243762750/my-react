@@ -1,28 +1,44 @@
-import React, {useRef} from 'react'
+import React, {useReducer} from 'react'
+import {MyReducer} from "./reducer";
+import {Child1} from "./child1";
+import {Child2} from "./child2";
 
-// useRef作用
-// 1获取dom元素
-// 2存值
-export function UseRefTest() {
-    const ref1 = useRef(null)
-    const ref2 = useRef({name: 'san'})
+// useReducer
+export function UseReducerTest() {
+    const reducer = (state, action) => {
+        switch (action.type) {
+            case 'setName':
+                return {
+                    ...state,
+                    name: 'si'
+                }
+            case 'setAge':
+                return {
+                    ...state,
+                    age: 19
+                }
+            default:
+                return state
+        }
+    }
+    const state = {name: 'san', age: 19}
+    const [store, dispatch] = useReducer(reducer, state)
     return (
         <>
-            {/*1获取dom元素*/}
             <div>
-                <input ref={ref1} type="text"/>
+                <span>{store.name}-{store.age}</span>
                 <button onClick={() => {
-                    console.log(ref1.current.value)
+                    dispatch({
+                        type: 'setName'
+                    })
                 }}>click
                 </button>
             </div>
-            {/*2存值*/}
             <div>
-                <button onClick={() => {
-                    ref2.current.name = ref1.current.value
-                    console.log(ref2)
-                }}>click
-                </button>
+                <MyReducer>
+                    <Child1/>
+                    <Child2/>
+                </MyReducer>
             </div>
         </>
     )
