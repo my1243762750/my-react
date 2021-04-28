@@ -10,7 +10,9 @@ import { Layout } from './components/Layout'
 // import { UseImperativeHandleTest } from "./components/UseImperativeHandleTest";
 // import { UseLayoutEffectTest } from "./components/UseLayoutEffectTest";
 // import { UseDefineHookTest } from "./components/UseDefineHookTest";
-import { UseReducerTest } from "./components/UseReducerTest";
+// import { UseReducerTest } from "./components/UseReducerTest";
+// import MyRedux from "./components/MyRedux/index";
+import MyReactRedux from "./components/MyReactRedux/index";
 import './App.css';
 
 function App() {
@@ -27,7 +29,9 @@ function App() {
           {/*<UseImperativeHandleTest/>*/}
           {/*<UseLayoutEffectTest/>*/}
           {/*<UseDefineHookTest/>*/}
-          <UseReducerTest/>
+          {/*<UseReducerTest/>*/}
+          {/*<MyRedux/>*/}
+          <MyReactRedux/>
       </Layout>
     </div>
   );
