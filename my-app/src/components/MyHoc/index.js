@@ -17,7 +17,8 @@ const Child = () => {
     )
 }
 
-// @container
+@container
+@container
 class Child2 extends Component {
     render() {
         return <div>Child2</div>

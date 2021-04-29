@@ -16,7 +16,8 @@ import { Layout } from './components/Layout'
 // import MyRouter from "./components/MyRouter/index";
 // import MyPureComponent from "./components/MyPureComponent/index";
 // import MyDialog from "./components/MyDialog/index";
-import MyHoc from "./components/MyHoc/index";
+// import MyHoc from "./components/MyHoc/index";
+import MyForm from "./components/MyForm/index";
 import './App.css';
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
           {/*<MyRouter/>*/}
           {/*<MyPureComponent/>*/}
           {/*<MyDialog/>*/}
-          <MyHoc/>
+          {/*<MyHoc/>*/}
+          <MyForm/>
       </Layout>
     </div>
   );
