@@ -12,7 +12,9 @@ import { Layout } from './components/Layout'
 // import { UseDefineHookTest } from "./components/UseDefineHookTest";
 // import { UseReducerTest } from "./components/UseReducerTest";
 // import MyRedux from "./components/MyRedux/index";
-import MyReactRedux from "./components/MyReactRedux/index";
+// import MyReactRedux from "./components/MyReactRedux/index";
+// import MyRouter from "./components/MyRouter/index";
+import MyPureComponent from "./components/MyPureComponent/index";
 import './App.css';
 
 function App() {
@@ -31,7 +33,9 @@ function App() {
           {/*<UseDefineHookTest/>*/}
           {/*<UseReducerTest/>*/}
           {/*<MyRedux/>*/}
-          <MyReactRedux/>
+          {/*<MyReactRedux/>*/}
+          {/*<MyRouter/>*/}
+          <MyPureComponent/>
       </Layout>
     </div>
   );
