@@ -14,7 +14,9 @@ import { Layout } from './components/Layout'
 // import MyRedux from "./components/MyRedux/index";
 // import MyReactRedux from "./components/MyReactRedux/index";
 // import MyRouter from "./components/MyRouter/index";
-import MyPureComponent from "./components/MyPureComponent/index";
+// import MyPureComponent from "./components/MyPureComponent/index";
+// import MyDialog from "./components/MyDialog/index";
+import MyHoc from "./components/MyHoc/index";
 import './App.css';
 
 function App() {
@@ -35,7 +37,9 @@ function App() {
           {/*<MyRedux/>*/}
           {/*<MyReactRedux/>*/}
           {/*<MyRouter/>*/}
-          <MyPureComponent/>
+          {/*<MyPureComponent/>*/}
+          {/*<MyDialog/>*/}
+          <MyHoc/>
       </Layout>
     </div>
   );
