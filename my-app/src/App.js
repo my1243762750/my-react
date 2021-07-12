@@ -17,8 +17,10 @@ import { Layout } from './components/Layout'
 // import MyPureComponent from "./components/MyPureComponent/index";
 // import MyDialog from "./components/MyDialog/index";
 // import MyHoc from "./components/MyHoc/index";
-import MyForm from "./components/MyForm/index";
+// import MyForm from "./components/MyForm/index";
 import './App.css';
+// import MyInput from "./components/MyInput/index";
+import RCForm from "./view/test/rcFieldForm";
 
 function App() {
   return (
@@ -41,7 +43,9 @@ function App() {
           {/*<MyPureComponent/>*/}
           {/*<MyDialog/>*/}
           {/*<MyHoc/>*/}
-          <MyForm/>
+          {/*<MyForm/>*/}
+          {/*<MyInput />*/}
+          <RCForm />
       </Layout>
     </div>
   );
