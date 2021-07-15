@@ -2,6 +2,12 @@ export default function createStore(reducer, enhancer) {
     let currentState = null;
     const listenerCallback = [];
 
+    if (typeof enhancer === 'object') {
+        currentState = enhancer;
+    } else if (enhancer === 'function') {
+        enhancer && enhancer(createStore)(reducer);
+    }
+
     const getState = () => {
         return currentState;
     }
@@ -14,10 +20,6 @@ export default function createStore(reducer, enhancer) {
     const subscribe = (fn) => {
         fn = fn || function () {};
         listenerCallback.push(fn);
-    }
-
-    if (typeof enhancer === 'object') {
-        currentState = enhancer;
     }
 
     return {

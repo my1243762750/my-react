@@ -19,7 +19,14 @@ export default class MyRedux extends Component {
                     store.dispatch({
                         type: 'setName'
                     })
-                }}>click</button>
+                }}>click one</button>
+                <button onClick={() => {
+                    store.dispatch((getState, dispatch) => {
+                        setTimeout(() => {
+                            dispatch({type: 'setName'});
+                        }, 1000)
+                    })
+                }}>click two</button>
             </div>
         )
     }
