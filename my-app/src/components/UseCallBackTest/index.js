@@ -4,8 +4,10 @@ import React, {useState, useCallback} from 'react'
 export function UseCallbackTest() {
     const [count,setCount] = useState(1)
     const callback = useCallback(() => {
+        console.log('callback');
         return count
     }, [])
+    console.log('hello world');
     return (
         <>
             <div>

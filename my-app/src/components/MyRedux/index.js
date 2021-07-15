@@ -1,26 +1,28 @@
-import React, {Component} from 'react'
-import store from "./store";
+export default function createStore(reducer, enhancer) {
+    let currentState = null;
+    const listenerCallback = [];
 
-export default class MyRedux extends Component {
-
-    componentDidMount() {
-        store.subscribe(() => {
-            this.forceUpdate()
-        })
+    const getState = () => {
+        return currentState;
     }
 
-    render() {
-        const {name, age} = store.getState()
-        return (
-            <div>
-                <h4>MyRedux</h4>
-                <span>{name}-{age}</span>
-                <button onClick={() => {
-                    store.dispatch({
-                        type: 'setName'
-                    })
-                }}>click</button>
-            </div>
-        )
+    const dispatch = (action) => {
+        currentState = reducer(currentState, action);
+        listenerCallback.forEach(fn => fn())
+    }
+
+    const subscribe = (fn) => {
+        fn = fn || function () {};
+        listenerCallback.push(fn);
+    }
+
+    if (typeof enhancer === 'object') {
+        currentState = enhancer;
+    }
+
+    return {
+        getState: getState,
+        dispatch: dispatch,
+        subscribe: subscribe
     }
 }

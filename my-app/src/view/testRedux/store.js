@@ -1,4 +1,5 @@
-import { createStore } from 'redux'
+// import { createStore } from 'redux'
+import createStore from "../../components/MyRedux";
 
 function reducer(state, action) {
     switch (action.type) {

@@ -20,7 +20,8 @@ import { Layout } from './components/Layout'
 // import MyForm from "./components/MyForm/index";
 import './App.css';
 // import MyInput from "./components/MyInput/index";
-import RCForm from "./view/test/rcFieldForm";
+// import RCForm from "./view/testFCFieldForm/rcFieldForm";
+import TestRedux from "./view/testRedux/index";
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
           {/*<MyHoc/>*/}
           {/*<MyForm/>*/}
           {/*<MyInput />*/}
-          <RCForm />
+          {/*<RCForm />*/}
+          <TestRedux />
       </Layout>
     </div>
   );

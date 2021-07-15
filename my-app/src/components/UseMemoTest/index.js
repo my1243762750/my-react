@@ -7,6 +7,7 @@ export function UseMemoTest() {
         return count
     }, [])
     const Child = ({count, setCount}) => {
+        console.log('child');
         return (
             <div>
                 <div>Child Component</div>
@@ -18,6 +19,7 @@ export function UseMemoTest() {
             </div>
         )
     }
+    console.log('hello world');
     return (
         <>
             <div>
